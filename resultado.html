@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <script>
+        function performTest() {
+          try {
+            top.location = "new.html";
+          } catch (e) {
+            top.postMessage("BLOCKED", "*");
+          }
+        }
+      </script>
+    </head>
+    <body onload="performTest();">
+      <p>
+        new!
+      </p>
+    </body>
+  </html>
+</html>

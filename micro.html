@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <script>
+        function performTest() {
+          try {
+            top.location = "https://25usl.csb.app/new.html";
+          } catch (e) {
+            top.postMessage("BLOCKED", "*");
+          }
+        }
+      </script>
+    </head>
+    <body onload="performTest();">
+      <p>
+        test!
+      </p>
+      <button id="b" onclick="performTest();">Navigate the top page</button>
+    </body>
+  </html>
+</html>
